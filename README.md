@@ -2,6 +2,9 @@
 
 RadioStream es un reproductor web ligero con panel de administración diseñado para publicar y embeber un stream de audio (Icecast, Shoutcast, HTTP streams, etc.). Proporciona una interfaz pública para oyentes y un panel `/admin` para gestionar etiqueta, descripción, URL del stream, imágenes (cover / background) y tema visual.
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9bff20f9-bc1a-49f9-9114-8a717b06b4cc" />
+
+
 ---
 
 ## Resumen ejecutivo 🔧🎧
