@@ -18,7 +18,7 @@ RadioStream es un reproductor web ligero con panel de administración diseñado 
 
 ## ¿Se puede cambiar la contraseña desde la web? ✅
 
-Sí. Desde `/admin` existe el campo **"Nueva contraseña"** (`new_pass`). Al guardar:
+Sí. Además, por defecto las credenciales son user: admin pass: admin. Desde `/admin` existe el campo **"Nueva contraseña"** (`new_pass`). Al guardar:
 
 * La contraseña se transforma con `werkzeug.security.generate_password_hash` y se guarda en `config.json` como `password_hash` (no se almacena en texto plano).
 * Si se cambia el usuario (campo **"Nuevo usuario"**), la sesión se actualiza con el nuevo nombre para evitar cerrar la sesión inmediatamente.
