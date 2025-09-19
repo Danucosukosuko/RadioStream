@@ -25,6 +25,9 @@ if ! command -v git >/dev/null 2>&1; then
     apt install -y git
 fi
 
+# --- Inicializar backup dir ---
+BACKUP_DIR=""
+
 # --- Copia de seguridad de config.json y static ---
 if [[ -d "$INSTALL_DIR" ]]; then
     TIMESTAMP=$(date +%Y%m%d_%H%M%S)
@@ -42,7 +45,7 @@ echo "📥 Clonando repositorio desde $REPO_URL..."
 git clone "$REPO_URL" "$INSTALL_DIR"
 
 # --- Restaurar backup si existe ---
-if [[ -d "$BACKUP_DIR" ]]; then
+if [[ -n "$BACKUP_DIR" && -d "$BACKUP_DIR" ]]; then
     echo "🔄 Restaurando config.json y static..."
     [[ -f "$BACKUP_DIR/config.json" ]] && cp "$BACKUP_DIR/config.json" "$INSTALL_DIR/"
     [[ -d "$BACKUP_DIR/static" ]] && cp -r "$BACKUP_DIR/static" "$INSTALL_DIR/"
